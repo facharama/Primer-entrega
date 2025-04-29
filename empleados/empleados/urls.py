@@ -17,12 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from applications.empleado.views import IndexView, ModeloPruebaListView, pruebaListaView
+from applications.empleado.views import IndexView, ModeloPruebaListView, PruebaListaView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', IndexView.as_view(), name='home'),
-    path('lista/', pruebaListaView.as_view(), name='lista'),
-    path('lista-prueba/', ModeloPruebaListView.as_view(), name='lista'),
+    path('lista/', PruebaListaView.as_view(), name='lista'),
+    path('lista-prueba/', ModeloPruebaListView.as_view(), name='lista-prueba'),
 
 ]

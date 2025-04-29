@@ -13,7 +13,7 @@ class Habilidades(models.Model):
     def __str__(self):
         return self.habilidad 
 
-class empleado (models.Model):
+class Empleado (models.Model):
 
 
     JOB_CHOICES =(
@@ -31,5 +31,5 @@ class empleado (models.Model):
     Habilidades= models.ManyToManyField(Habilidades)
 
     def __str__(self):
-        return self.nombre + ' - ' + self.apellido 
+        return self.nombre + ' - ' + self.apellido + ' - ' + self.trabajo
     
